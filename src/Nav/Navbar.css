@@ -1,0 +1,103 @@
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  color: rgb(197, 184, 184);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 6px;
+  position: relative;
+
+  }
+  
+  .logo-icon { font-size: 2.9rem; 
+    display: flex;
+  
+}
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+    
+  }
+
+  .navbar-search {
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .navbar-title {
+    color: rgb(197, 184, 184);    
+    text-decoration: none;
+    font-size:2rem;
+    font-weight: bold;
+  }
+  
+ 
+  .navbar-search input {
+    padding: 0.5rem;
+    border-radius: 4px
+ 
+  }
+  .navbar-search button {
+    padding: 0.6rem;
+    border-radius: 4px;
+    border: none;
+    background: #ff4754;
+    color:  rgb(197, 184, 184);    
+  }
+  
+
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+    
+  }
+  .nav-link {
+    color:  rgb(197, 184, 184);  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Botón móvil (oculto en desktop) */
+  .navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(197, 184, 184);    ;
+    font-size: 1.5rem;
+  }
+
+
+
+
+
+  
+  /* Responsive: Menú móvil  ESTO AUN NO SE QUE ES O QUE HACE */
+  @media (max-width: 768px) {
+    .navbar-links {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: #1a1a1a;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+      transform: translateY(-150%);
+      transition: transform 0.3s ease;
+    }
+    .navbar-links.active {
+      transform: translateY(0);
+    }
+    .navbar-toggle { display: block; }
+    .navbar-search { display: none; } /* Ocultar búsqueda en móvil si es necesario */
+  }

@@ -1,0 +1,63 @@
+/* Contenedor principal*/
+.video-list {
+    padding: 1.5rem 2rem;
+    background-color: #1a1a1a;
+    color: rgb(197, 184, 184);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 6px;
+    margin: 0.09rem 0;
+  }
+  
+  /* Título */
+  .video-list h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: rgb(197, 184, 184);
+    border-bottom: 2px solid #ff4754;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Grid de videos - Adaptado al estilo retro */
+  .videos-container {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 2fr));
+    gap: 1.5rem;
+  }
+  
+  /* Tarjetas de video */
+  .video-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #2a2a2a;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .video-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 4px 12px rgba(255, 71, 84, 0.2);
+    border-color: #ff4754;
+  }
+  
+  /* Miniaturas */
+  .video-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-bottom: 2px solid #ff4754;
+  }
+  
+  /* Títulos */
+  .video-card h3 {
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin: 0;
+    color: rgb(197, 184, 184);
+    font-weight: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  /* Efecto al seleccionar - Usa el color rojo del navbar */
+  .video-card:active {
+    transform: scale(0.98);
+  }
